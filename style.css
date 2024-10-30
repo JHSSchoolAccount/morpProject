@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+#game-container {
+  text-align: center;
+}
+
+#board {
+  display: grid;
+  gap: 5px;
+  margin: 20px auto;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: repeat(3, 1fr); /* Adjust this for different puzzle sizes */
+  background-color: #333;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: #4caf50;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.blank {
+  background-color: #555;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tile.correct {
+    background-color: #4caf50; /* Green for correct positions */
+}
+
+.tile.incorrect {
+    background-color: #e54848; /* Red for incorrect positions */
+}
